@@ -1,0 +1,38 @@
+# Secrets: configuration templates are safe to commit.
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+
+# Local runtimes, dependencies and build output
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+node_modules/
+dist/
+*.tsbuildinfo
+.pnpm-store/
+.cache/
+
+# Runtime records, downloaded models and local logs
+data/
+logs/
+*.log
+*.sqlite*
+*.db
+weights/
+checkpoints/
+*.pt
+*.pth
+*.safetensors
+
+# OS/editor local state
+.DS_Store
+.idea/
+.vscode/

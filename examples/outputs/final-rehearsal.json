@@ -1,0 +1,276 @@
+{
+  "turns": [
+    {
+      "conversation_id": "90c5dd8f-4dff-452a-8682-1a1ccc90ec26",
+      "assistant_message": "已收到 76 aa 序列。请选择一个预测模型：ESMFold2 或 Protenix。",
+      "job_ids": [],
+      "chat_mode": "llm",
+      "outcome": "ask_model",
+      "user_message": "请预测这条序列：\nMQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG",
+      "utc": "2026-11-21T10:03:30.602834+00:00",
+      "tools": [
+        {
+          "tool": "predict_structure",
+          "call_id": "call_00_6XKPyMRYWtd3PhzCtVg91298",
+          "reused": false,
+          "result": {
+            "code": "ask_model",
+            "length": 76
+          }
+        }
+      ]
+    },
+    {
+      "conversation_id": "90c5dd8f-4dff-452a-8682-1a1ccc90ec26",
+      "assistant_message": "ESMFold2 · Mock · 76 aa。已提交任务 19823b05-f464-452a-83f5-9ff691ed0b31。使用 RCSB PDB 1UBQ 示例结构，非输入序列的真实预测。",
+      "job_ids": [
+        "19823b05-f464-452a-83f5-9ff691ed0b31"
+      ],
+      "chat_mode": "llm",
+      "outcome": "job_submitted",
+      "user_message": "ESMFold2",
+      "utc": "2026-11-21T10:03:33.008773+00:00",
+      "tools": [
+        {
+          "tool": "predict_structure",
+          "call_id": "call_00_bYmCMdRet9GJJaIhqsCv2382",
+          "reused": false,
+          "result": {
+            "code": "job_submitted",
+            "id": "19823b05-f464-452a-83f5-9ff691ed0b31",
+            "status": "queued",
+            "model": "esmfold2",
+            "mode": "mock",
+            "model_version": "mock-1UBQ-v1",
+            "length": 76,
+            "fixture_source": "https://www.rcsb.org/structure/1UBQ",
+            "result_available": false
+          }
+        }
+      ]
+    },
+    {
+      "conversation_id": "90c5dd8f-4dff-452a-8682-1a1ccc90ec26",
+      "assistant_message": "Protenix · Mock · 76 aa. Submitted job 7aedad40-fdde-4a61-b4ac-6c74646a1bc1. The example is RCSB PDB 1UBQ, not a prediction for your sequence.",
+      "job_ids": [
+        "7aedad40-fdde-4a61-b4ac-6c74646a1bc1"
+      ],
+      "chat_mode": "llm",
+      "outcome": "job_submitted",
+      "user_message": "Use the same sequence with Protenix.",
+      "utc": "2026-11-21T10:03:34.842674+00:00",
+      "tools": [
+        {
+          "tool": "predict_structure",
+          "call_id": "call_00_AKqBZXO8r5marKjySbgd3965",
+          "reused": false,
+          "result": {
+            "code": "job_submitted",
+            "id": "7aedad40-fdde-4a61-b4ac-6c74646a1bc1",
+            "status": "queued",
+            "model": "protenix",
+            "mode": "mock",
+            "model_version": "mock-1UBQ-v1",
+            "length": 76,
+            "fixture_source": "https://www.rcsb.org/structure/1UBQ",
+            "result_available": false
+          }
+        }
+      ]
+    },
+    {
+      "conversation_id": "90c5dd8f-4dff-452a-8682-1a1ccc90ec26",
+      "assistant_message": "任务 7aedad40-fdde-4a61-b4ac-6c74646a1bc1：succeeded (protenix, mock) · 1UBQ 示例结构，非输入序列的真实预测。",
+      "job_ids": [
+        "7aedad40-fdde-4a61-b4ac-6c74646a1bc1"
+      ],
+      "chat_mode": "llm",
+      "outcome": "job_status",
+      "user_message": "请查询本会话任务 7aedad40-fdde-4a61-b4ac-6c74646a1bc1 的状态。",
+      "utc": "2026-11-21T10:03:42.739458+00:00",
+      "tools": [
+        {
+          "tool": "get_job_status",
+          "call_id": "call_00_We5OZMFADHMeRr7pkZ9F3255",
+          "reused": false,
+          "result": {
+            "code": "job_status",
+            "id": "7aedad40-fdde-4a61-b4ac-6c74646a1bc1",
+            "model": "protenix",
+            "model_version": "mock-1UBQ-v1",
+            "mode": "mock",
+            "status": "succeeded",
+            "error": null,
+            "error_message": null,
+            "fixture_source": "https://www.rcsb.org/structure/1UBQ",
+            "result_available": true
+          }
+        }
+      ]
+    },
+    {
+      "conversation_id": "90c5dd8f-4dff-452a-8682-1a1ccc90ec26",
+      "assistant_message": "序列包含非法残基或符号。只接受 20 种标准氨基酸；请核对原文，系统不会自动删除或替换字符。",
+      "job_ids": [],
+      "chat_mode": "llm",
+      "outcome": "invalid_residues",
+      "user_message": "请用 ESMFold2 预测这条序列：ABCZ123",
+      "utc": "2026-11-21T10:03:49.232484+00:00",
+      "tools": []
+    }
+  ],
+  "views": [
+    {
+      "job": {
+        "id": "19823b05-f464-452a-83f5-9ff691ed0b31",
+        "conversation_id": "90c5dd8f-4dff-452a-8682-1a1ccc90ec26",
+        "model": "esmfold2",
+        "model_version": "mock-1UBQ-v1",
+        "mode": "mock",
+        "status": "succeeded",
+        "length": 76,
+        "created_at": "2026-11-21T10:03:32.380973+00:00",
+        "started_at": "2026-11-21T10:03:33.009763+00:00",
+        "finished_at": "2026-11-21T10:03:36.018295+00:00",
+        "parameters": {
+          "fixture_id": "1UBQ",
+          "source": "https://www.rcsb.org/structure/1UBQ",
+          "fixture_sha256": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+          "mock_delay_seconds": 3,
+          "timeout_seconds": 30
+        },
+        "seed": null,
+        "error": null,
+        "error_message": null,
+        "fixture_source": "https://www.rcsb.org/structure/1UBQ",
+        "result_available": true,
+        "download_name": "esmfold2-mock-19823b05-f464-452a-83f5-9ff691ed0b31.pdb",
+        "sha256": "a3daac9b9b110e5bdb6a1d61ff205c9181acc343ac8e739bb4507fc1e05eb910"
+      },
+      "name": "esmfold2-mock-19823b05-f464-452a-83f5-9ff691ed0b31.pdb",
+      "colored_pixels": [
+        253,
+        287,
+        401
+      ],
+      "preview_equals_download": true
+    },
+    {
+      "job": {
+        "id": "7aedad40-fdde-4a61-b4ac-6c74646a1bc1",
+        "conversation_id": "90c5dd8f-4dff-452a-8682-1a1ccc90ec26",
+        "model": "protenix",
+        "model_version": "mock-1UBQ-v1",
+        "mode": "mock",
+        "status": "succeeded",
+        "length": 76,
+        "created_at": "2026-11-21T10:03:34.076790+00:00",
+        "started_at": "2026-11-21T10:03:36.019696+00:00",
+        "finished_at": "2026-11-21T10:03:39.025358+00:00",
+        "parameters": {
+          "fixture_id": "1UBQ",
+          "source": "https://www.rcsb.org/structure/1UBQ",
+          "fixture_sha256": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+          "mock_delay_seconds": 3,
+          "timeout_seconds": 30
+        },
+        "seed": null,
+        "error": null,
+        "error_message": null,
+        "fixture_source": "https://www.rcsb.org/structure/1UBQ",
+        "result_available": true,
+        "download_name": "protenix-mock-7aedad40-fdde-4a61-b4ac-6c74646a1bc1.pdb",
+        "sha256": "e5a46671d36e39de86840ebaddc7010dac4e234cbb78cffbd804d1381f58f297"
+      },
+      "name": "protenix-mock-7aedad40-fdde-4a61-b4ac-6c74646a1bc1.pdb",
+      "colored_pixels": [
+        250,
+        290,
+        404
+      ],
+      "preview_equals_download": true
+    }
+  ],
+  "polls": [
+    [
+      "19823b05-f464-452a-83f5-9ff691ed0b31",
+      "running"
+    ],
+    [
+      "7aedad40-fdde-4a61-b4ac-6c74646a1bc1",
+      "queued"
+    ],
+    [
+      "19823b05-f464-452a-83f5-9ff691ed0b31",
+      "running"
+    ],
+    [
+      "7aedad40-fdde-4a61-b4ac-6c74646a1bc1",
+      "running"
+    ],
+    [
+      "19823b05-f464-452a-83f5-9ff691ed0b31",
+      "succeeded"
+    ],
+    [
+      "7aedad40-fdde-4a61-b4ac-6c74646a1bc1",
+      "running"
+    ],
+    [
+      "7aedad40-fdde-4a61-b4ac-6c74646a1bc1",
+      "succeeded"
+    ],
+    [
+      "7aedad40-fdde-4a61-b4ac-6c74646a1bc1",
+      "succeeded"
+    ],
+    [
+      "19823b05-f464-452a-83f5-9ff691ed0b31",
+      "succeeded"
+    ]
+  ],
+  "zero_extra_chat_during_views_and_refresh": true,
+  "final_message_count": 10,
+  "final_job_count": 2,
+  "browser": "157.0.8103.78",
+  "sequence_sha256": "233b4b0b8c4616095bc3249f9375fc345d32af7deaef07117d0383c51d6f19aa",
+  "runtime_provider": "DeepSeek (production client, service-side credentials)",
+  "execution": "Local Chrome via loopback, built React app, isolated SQLite, two explicit Mock adapters",
+  "historical_protenix_archive_replay": {
+    "conversation_id": "3de221aa-1c0a-4d45-a411-698de8d81434",
+    "job_id": "94e78e41-5605-4be1-ae66-8b3f795d818a",
+    "browser": "157.0.8103.78",
+    "location": "mac_archive",
+    "view_path": "/api/jobs/94e78e41-5605-4be1-ae66-8b3f795d818a/structure?conversation_id=3de221aa-1c0a-4d45-a411-698de8d81434",
+    "view_sha256": "d879db64ec1b39b93b55ffbb5919f4681ac5a3eb2266baf414865825c9220dd1",
+    "before": {
+      "area": 353,
+      "shape": [
+        90.02765450328616,
+        149.60303027871169,
+        -40.251402386665404
+      ]
+    },
+    "rotated": {
+      "area": 363,
+      "shape": [
+        134.0493287495542,
+        128.6796591003956,
+        -78.88589880776203
+      ]
+    },
+    "zoomed": {
+      "area": 495,
+      "shape": [
+        140.2903948576677,
+        162.98505866748292,
+        -79.56304866850314
+      ]
+    },
+    "chat_requests": 0,
+    "download_path": "/api/jobs/94e78e41-5605-4be1-ae66-8b3f795d818a/structure?conversation_id=3de221aa-1c0a-4d45-a411-698de8d81434&download=true",
+    "download_name": "protenix-real-94e78e41-5605-4be1-ae66-8b3f795d818a.pdb",
+    "download_sha256": "d879db64ec1b39b93b55ffbb5919f4681ac5a3eb2266baf414865825c9220dd1",
+    "refresh": true
+  }
+}
